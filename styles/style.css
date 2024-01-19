@@ -1,4 +1,5 @@
 html {
+    background-color: rgb(79, 79, 79);
     font-size: 12px;
     font-family: "Roboto Mono", sans-serif;
 }
@@ -7,10 +8,14 @@ body {
     position: relative;
 }
 
-* {
+/* * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+} */
+
+nav {
+    width: max-content;
 }
 
 .art-title {
@@ -28,9 +33,12 @@ a {
 }
 
 h1 {
+    margin: 20px auto;
+    padding: 20px;
     color: red;
     font-size: 60px;
     text-align: center;
+    text-shadow: 2px 2px 3px aqua;
 }
 
 h2{
@@ -73,11 +81,15 @@ p {
 
 }
 
-nav {
-    width: 100%;
+img {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
 }
 
 .nav-bar-item {
     display: inline;
+    border: 2px solid black;
+    padding: 4px;
 }
-/* TODO: align image to center of page */
