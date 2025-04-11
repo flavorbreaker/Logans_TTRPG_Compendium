@@ -1,10 +1,24 @@
 const myImage = document.querySelector("img");
+const imageAttr = document.querySelector(".hero-image-attribution");
 
-myImage.onclick = () => {
-    const mySrc = myImage.getAttribute("src");
-    if (mySrc === "images/lancer-rpg-artwork.jpg") {
-        myImage.setAttribute("src", "images/lancer_1200x675.jpg");
-    } else {
-        myImage.setAttribute("src", "images/lancer-rpg-artwork.jpg");
+const heroImageSources = ["images/lancer/lancer_hero_1.jpg", "images/mythic_bastionland/mb_hero_1.png","images/lancer/lancer_hero_2.jpg"]
+
+let i = 0;
+
+//changes the image when clicked
+const changeImage = () => {
+    myImage.src = heroImageSources[i];
+    if (i == heroImageSources.length - 1){
+        i = 0;
+    }
+    else {i++};
+
+    if (myImage.src.includes("lancer")) {
+        imageAttr.textContent = "Lancer";
+    }
+    else {
+        imageAttr.textContent = "Mythic Bastionland";
     }
 }
+
+setInterval(changeImage, 2000);
