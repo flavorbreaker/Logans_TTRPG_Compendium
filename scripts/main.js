@@ -5,7 +5,7 @@ const heroImageSources = ["images/lancer/lancer_hero_1.jpg", "images/mythic_bast
 
 let i = 0;
 
-//changes the image when clicked
+//changes the image after 2 seconds
 const changeImage = () => {
     myImage.src = heroImageSources[i];
     if (i == heroImageSources.length - 1){
