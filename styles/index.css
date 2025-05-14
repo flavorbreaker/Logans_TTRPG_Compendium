@@ -128,7 +128,7 @@ nav {
 
 .nav-bar {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	margin: 0.5% auto;
 }
 
@@ -149,10 +149,14 @@ nav {
 
 .blog-post-container {
 	display: flex;
-	justify-content: space-evenly;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
 	margin: auto;
-	/* width: 60%; */
-	/* height: 300px; */
+
+	height: 40em;
+	max-width: 100%;
 
 	padding: 1%;
 
@@ -162,15 +166,17 @@ nav {
 .blog-post {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	align-items: center;
 
 	position: relative;
 	margin: 2%;
-	text-align: left;
-	line-height: normal;
-	max-height: 400px;
-	width: 50%;
 	padding: 1%;
+	text-align: justify;
+	line-height: normal;
+
+	max-height: fit-content;
+	max-width: 20%;
+
 	overflow: hidden;
 	border: 2px, solid, black;
 	border-radius: 5px;
@@ -208,9 +214,11 @@ nav {
 	height: 100%;
 	width: 100%;
 	position: absolute;
+	top: 0;
+	left: 0;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-evenly;
 }
 
 .blog-post-read-article {
@@ -228,15 +236,15 @@ nav {
 
 .open-article-icon {
 	position: relative;
-	/* top: 10px; */
+	bottom: 3px;
 	z-index: 1;
 
 	opacity: 0;
 	transition: opacity 0.5s ease;
 }
 
-h3 {
-	margin: auto;
+.blog-post-title {
+	margin: 3%;
 
 	color: red;
 	text-decoration: underline;
@@ -251,6 +259,8 @@ h3 {
 
 .blog-post-body {
 	display: inline;
+	margin: 3% 0%;
+
 	font-size: 1.5rem;
 	text-overflow: ellipsis;
 	color: black;
