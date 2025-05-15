@@ -1,110 +1,86 @@
+@font-face {
+	font-family: "Roboto Mono";
+	src: local("fonts/RobotoMono/RobotoMono-VariableFont_wght.ttf"),
+		url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+}
+
+@font-face {
+	font-family: "Caudex";
+	src: local("fonts/Caudex/Caudex-Regular.ttf"),
+		url("https://fonts.googleapis.com/css?family=Caudex");
+}
+
 * {
 	font-style: normal; /*overwrites default font styling (italics, bold, etc.)*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
-	/* background-color: rgb(255, 255, 255); */
 	font-size: 1em;
 	font-family: "Roboto Mono", sans-serif;
-
-	/* cursor: default; */
 	line-height: 110%;
+
+	background-color: rgb(7, 44, 46);
 }
 
 body {
 	margin: 0;
 	display: flex;
 	flex-direction: column;
-}
 
-/* * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;            //don't use till you understand
-    box-sizing: border-box;
-} */
+	background-color: rgb(7, 44, 46);
+}
 
 .italicized-title {
 	font-style: italic;
 }
 
-/* p,
-li {
-    letter-spacing: 1px;
-    line-height: 2;
-} */
-
 a {
-	color: red;
-}
-
-h1 {
-	margin: 0;
-	padding: 1%;
-	color: red;
-	font-size: 4rem;
-	text-align: center;
-	text-shadow: 2px 2px 3px aqua;
-	background-color: black;
-	line-height: 100%;
+	color: rgb(188, 188, 188);
 }
 
 .page-title-container {
 	display: flex;
 	justify-content: center;
-	background-color: black;
-	width: 100%;
-	/* height: 100%; */
+	background-color: rgb(2, 37, 39);
 }
 
-.page-description {
-	line-height: 100%;
-	margin: 1% auto;
-	width: 70%;
-	font-size: xx-large;
-	color: red;
+h1 {
+	margin: 0;
+	padding: 1%;
+
+	font-family: "Caudex";
+	color: rgb(0, 138, 138);
+	font-size: 4rem;
 	text-align: center;
+	text-shadow: 2px 2px 3px aqua;
+	line-height: 100%;
+}
+
+.page-description-container {
+	background-color: lightgrey;
 }
 
 a:hover {
-	color: aqua;
-}
-
-/* a:visited {
-	color: rgb(0, 167, 167);
-} */
-
-/* .basic-text {
-    font-weight: bold;
-    color: red;
-} */
-
-p {
-	font-size: x-large;
-	color: red;
+	color: rgb(0, 138, 138);
 }
 
 .candela-obscura-link:hover {
 	color: rgb(110, 12, 134);
 }
 
-.hero {
-	margin: 0 auto;
-	width: 100%;
-}
-
 .hero-images-container {
 	position: relative;
-	/* margin: 0 1% 0% 1%; */
-	width: 100%;
-	padding: 1.5%;
+	margin: 0em 10em;
+	/* width: 100%; */
+	padding: 1.5em;
 	background-color: rgb(0, 0, 0);
 }
 
 .hero-image {
 	width: 100%;
-	/* height: auto; */
-	display: block;
-	margin: 0 auto;
 }
 
 .hero-image-attribution {
@@ -113,24 +89,28 @@ p {
 	bottom: 5%;
 	right: 3%;
 	line-height: 100%;
-	padding: 0.75%;
+	padding: 0.3em;
 
 	background-color: rgba(255, 255, 255, 0.5);
 	color: black;
 }
 
 nav {
-	width: 100%;
-	background-color: rgb(55, 55, 55);
+	/* background-color: rgb(0, 47, 47); */
 	position: sticky;
 	top: 0px; /*places the sticky at the top of the page*/
 	z-index: 1;
+
+	/* margin-top: 0; */
 }
 
 .nav-bar {
 	display: flex;
 	justify-content: center;
-	margin: 0.5% auto;
+	margin: auto;
+	padding: 0.25em;
+
+	background-color: rgb(73, 73, 73);
 }
 
 .nav-bar-item {
@@ -160,8 +140,6 @@ nav {
 	max-width: 100%;
 
 	padding: 1%;
-
-	/* background-color: bisque; */
 }
 
 .blog-post {
@@ -203,7 +181,7 @@ nav {
 }
 
 .blog-post:hover {
-	.open-article-icon {
+	.open-post-icon {
 		opacity: 1;
 	}
 	.blog-post-read-article {
@@ -235,7 +213,7 @@ nav {
 	transition: opacity 0.5s ease;
 }
 
-.open-article-icon {
+.open-post-icon {
 	position: relative;
 	bottom: 3px;
 	z-index: 1;
