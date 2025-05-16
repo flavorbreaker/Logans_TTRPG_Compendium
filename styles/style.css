@@ -33,10 +33,6 @@ body {
 	background-color: rgb(7, 44, 46);
 }
 
-.italicized-title {
-	font-style: italic;
-}
-
 a {
 	color: rgb(188, 188, 188);
 }
@@ -47,28 +43,56 @@ a {
 	background-color: rgb(2, 37, 39);
 }
 
-h1 {
-	margin: 0;
-	padding: 1%;
-
-	font-family: "Caudex";
-	color: rgb(0, 138, 138);
-	font-size: 4rem;
-	text-align: center;
-	text-shadow: 2px 2px 3px aqua;
-	line-height: 100%;
-}
-
-.page-description-container {
-	background-color: lightgrey;
-}
-
 a:hover {
 	color: rgb(0, 138, 138);
 }
 
 .candela-obscura-link:hover {
 	color: rgb(110, 12, 134);
+}
+
+h1.page-title {
+	margin: 0;
+	padding: 1%;
+
+	/* font-family: "Caudex"; */
+	color: rgb(152, 18, 18);
+	font-size: 4rem;
+	text-align: center;
+	text-shadow: 0.05em 0.05em 3px rgb(84, 0, 0);
+	line-height: 100%;
+}
+
+.italicized-title {
+	font-style: italic;
+}
+
+nav {
+	/* background-color: rgb(0, 47, 47); */
+	position: sticky;
+	top: 0px; /*places the sticky at the top of the page*/
+	z-index: 1;
+
+	/* margin-top: 0; */
+}
+
+.nav-bar {
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	padding: 0.25em;
+
+	background-color: rgb(104, 11, 11);
+}
+
+.nav-bar-item {
+	display: inline-block;
+	margin: 0 1%;
+	font-weight: bold;
+}
+
+.nav-bar-item-link {
+	text-decoration: none;
 }
 
 .hero-images-container {
@@ -93,34 +117,6 @@ a:hover {
 
 	background-color: rgba(255, 255, 255, 0.5);
 	color: black;
-}
-
-nav {
-	/* background-color: rgb(0, 47, 47); */
-	position: sticky;
-	top: 0px; /*places the sticky at the top of the page*/
-	z-index: 1;
-
-	/* margin-top: 0; */
-}
-
-.nav-bar {
-	display: flex;
-	justify-content: center;
-	margin: auto;
-	padding: 0.25em;
-
-	background-color: rgb(73, 73, 73);
-}
-
-.nav-bar-item {
-	display: inline-block;
-	margin: 0 1%;
-	font-weight: bold;
-}
-
-.nav-bar-item-link {
-	text-decoration: none;
 }
 
 .main-content {
