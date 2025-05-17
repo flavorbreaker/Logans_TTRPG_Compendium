@@ -1,13 +1,29 @@
+:root {
+	--primary-color: rgb(7, 44, 44);
+	--primary-accent-color: rgb(0, 138, 138);
+	--secondary-color: rgb(152, 18, 18);
+	--secondary-accent-color: rgb(84, 0, 0);
+
+	--candela-primary-color: rgb(21, 89, 68);
+	--candela-primary-accent-color: rgb(48, 190, 145);
+	--candela-secondary-color: rgb(201, 184, 97);
+	--candela-secondary-accent-color: rgb(159, 139, 39);
+
+	--lancer-primary-color: rgb(255, 0, 242);
+	--lancer-primary-accent-color: ;
+	--lancer-secondary-color: rgb(34, 170, 255);
+	--lancer-secondary-accent-color: ;
+
+	--dnd5e-primary-color: rgb(255, 0, 0);
+	--dnd5e-primary-accent-color: ;
+	--dnd5e-secondary-color: rgb(181, 181, 181);
+	--dnd5e-secondary-accent-color: ;
+}
+
 @font-face {
 	font-family: "Roboto Mono";
 	src: local("fonts/RobotoMono/RobotoMono-VariableFont_wght.ttf"),
 		url("https://fonts.googleapis.com/css?family=Roboto+Mono");
-}
-
-@font-face {
-	font-family: "Caudex";
-	src: local("fonts/Caudex/Caudex-Regular.ttf"),
-		url("https://fonts.googleapis.com/css?family=Caudex");
 }
 
 * {
@@ -22,7 +38,7 @@ html {
 	font-family: "Roboto Mono", sans-serif;
 	line-height: 110%;
 
-	background-color: rgb(7, 44, 46);
+	/* background-color: var(--primary-color); */
 }
 
 body {
@@ -30,7 +46,7 @@ body {
 	display: flex;
 	flex-direction: column;
 
-	background-color: rgb(7, 44, 46);
+	background-color: var(--primary-color);
 }
 
 a {
@@ -44,11 +60,43 @@ a {
 }
 
 a:hover {
-	color: rgb(0, 138, 138);
+	color: var(--primary-accent-color);
 }
 
 .candela-obscura-link:hover {
-	color: rgb(110, 12, 134);
+	background: linear-gradient(
+		to right,
+		var(--candela-primary-color),
+		var(--candela-secondary-color),
+		var(--candela-primary-color)
+	);
+
+	background-clip: text;
+	color: transparent;
+}
+
+.dnd5e-link:hover {
+	background: linear-gradient(
+		to right,
+		var(--dnd5e-primary-color),
+		var(--dnd5e-secondary-color),
+		var(--dnd5e-primary-color)
+	);
+
+	background-clip: text;
+	color: transparent;
+}
+
+.lancer-link:hover {
+	background: linear-gradient(
+		to right,
+		var(--lancer-primary-color),
+		var(--lancer-secondary-color),
+		var(--lancer-primary-color)
+	);
+
+	background-clip: text;
+	color: transparent;
 }
 
 h1.page-title {
@@ -56,10 +104,10 @@ h1.page-title {
 	padding: 1%;
 
 	/* font-family: "Caudex"; */
-	color: rgb(152, 18, 18);
+	color: var(--secondary-color);
 	font-size: 4rem;
 	text-align: center;
-	text-shadow: 0.05em 0.05em 3px rgb(84, 0, 0);
+	text-shadow: 0.05em 0.05em 3px var(--secondary-accent-color);
 	line-height: 100%;
 }
 
@@ -97,7 +145,7 @@ nav {
 
 .hero-images-container {
 	position: relative;
-	margin: 0em 10em;
+	margin: 1em 10em 0em;
 	/* width: 100%; */
 	padding: 1.5em;
 	background-color: rgb(0, 0, 0);
